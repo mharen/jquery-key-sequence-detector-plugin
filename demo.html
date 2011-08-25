@@ -1,0 +1,22 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset=utf-8 />
+	<title>Sample Use of Key Sequence Detector Plugin</title>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6/jquery.min.js"></script>
+	<script src="jquery.keysequencedetector.js"></script>
+	<script>
+		$(function(){
+		
+			$(window).keySequenceDetector('easter egg', function(){ alert('boom'); });
+			
+		});
+	</script>
+</head>
+<body>
+	<fieldset>
+		<legend>Behold! A Key Sequence Detector</legend>
+		<p>Simply enter the key sequence, 'easter egg', to trigger the action passed to the plugin.
+	</fieldset>
+</body>
+</html>
