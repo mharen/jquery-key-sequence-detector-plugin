@@ -9,6 +9,7 @@
 		$(function(){
 		
 			$(window).keySequenceDetector('easter egg', function(){ alert('boom'); });
+			$('input').keySequenceDetector('easter eggs', function() { alert('booms'); });
 			
 		});
 	</script>
@@ -16,7 +17,15 @@
 <body>
 	<fieldset>
 		<legend>Behold! A Key Sequence Detector</legend>
-		<p>Simply enter the key sequence, 'easter egg', to trigger the action passed to the plugin.
+		<p>Simply type the key sequence, 'easter egg', to trigger the action passed to the plugin. Anywhere!</p>
+		<p><blockquote>Code: <code>$(window).keySequenceDetector('easter egg', function(){ alert('boom'); });</code></blockquote></p>
 	</fieldset>
+	<fieldset>
+		<legend>Scoped to an element</legend>
+		<p>Now the key phrase is 'easter egg<b>s</b>', but it must be entered in this input: <input/></p>
+		<p>(Note: the first, window-bound detector will "boom" first, then this one will "boom" again when you enter the final "s"</p>
+		<p><blockquote>Code: <code>$('input').keySequenceDetector('easter eggs', function() { alert('booms'); });</code></blockquote></p>
+	</fieldset>
+
 </body>
 </html>
