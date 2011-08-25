@@ -1,4 +1,4 @@
-#jQuery Max Length Plugin
+#jQuery Key Sequence Detector Plugin
 ##What?
 This plugin watches for a sequence of characters to be typed, and executes some function when detected.
 
