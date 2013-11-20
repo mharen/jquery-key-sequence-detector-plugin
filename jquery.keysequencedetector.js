@@ -32,9 +32,9 @@
 
 		return this.each(function() {
 			var i = 0;
-			$(this).keypress(function(e) {
+			$(this).keypress(function(event) {
 				// decode the character code into the actual letter typed
-				var key = String.fromCharCode(e.which),
+				var key = String.fromCharCode(event.which),
 					textAcceptingInputTypes = ["text", "password", "number", "email", "url", "range", "date", "month", "week", "time", "datetime", "datetime-local", "search", "color", "tel"];
 
                 // Don't fire in text-accepting inputs that we didn't directly bind to
