@@ -32,6 +32,7 @@
 
 		return this.each(function() {
 			var i = 0;
+			var keystrokes = '';
 			$(this).keypress(function(event) {
 				// decode the character code into the actual letter typed
 				var key = String.fromCharCode(event.which),
@@ -44,14 +45,15 @@
                 }
 
 				// see if it's the next key in the sequence
-				if (sequence[i] === key) {
+				if (sequence[i] === '.' || sequence[i] === key) {
 					// it was!
 					++i;
+					keystrokes = keystrokes + key;
 
 					// is the sequence complete?
 					if (sequence.length === i) {
 						i = 0;
-						action();
+						action(keystrokes);
 					}
 				}
 				else {
@@ -59,6 +61,7 @@
 					// reset to first character if that's what broke the sequence
 					// or nothing, otherwise
 					i = +(sequence[0] === key);
+					keystrokes = (sequence[0] === key) ? key : '';
 				}
 			});
 		});
