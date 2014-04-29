@@ -54,6 +54,7 @@
 					if (sequence.length === i) {
 						i = 0;
 						action(keystrokes);
+			            keystrokes = '';
 					}
 				}
 				else {
