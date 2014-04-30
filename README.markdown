@@ -24,7 +24,7 @@ The following options can be provided like so (default values specified):
 
     $('.yourSelector').keySequenceDetector({
 	
-         // none yet
+         wildcard: '.'
 
     });      
 

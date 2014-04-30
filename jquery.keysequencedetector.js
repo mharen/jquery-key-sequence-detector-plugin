@@ -45,7 +45,7 @@
                 }
 
 				// see if it's the next key in the sequence
-				if (sequence[i] === '.' || sequence[i] === key) {
+				if (sequence[i] === settings.wildcard || sequence[i] === key) {
 					// it was!
 					++i;
 					keystrokes = keystrokes + key;
@@ -69,7 +69,7 @@
 	};
 
 	$.fn.keySequenceDetector.defaultOptions = {
-		// none yet!
+		wildcard: '.'
 	};
 
 })(jQuery);
